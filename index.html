@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画板</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .drawBoard{
+            margin: 30px;
+        }
+        #cavs{
+            border: 1px solid rebeccapurple;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);;
+        }
+        .drawBoard ul{
+            width: 700px;
+            text-align: center;
+        }
+        .drawBoard ul li{
+            display: inline-block;
+            margin-left: 35px;
+        }
+        .drawBoard ul li input{
+            padding: 6px 15px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .drawBoard ul li input:hover{
+            /* border: 1px solid yellowgreen; */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+    </style>
+    <script></script>
+</head>
+<body>
+    <div class="drawBoard">
+        <canvas id="cavs" width="700" height="330"></canvas>
+        <ul>
+            <li>
+                <input type="color" id="color">
+            </li>
+            <li>
+                <input type="button" id="cleanBoard" value="清屏">
+            </li>
+            <li>
+                <input type="button" id="eraser" value="橡皮">
+            </li>
+            <li>
+                <input type="button" id="rescind" value="撤销">
+
+            </li>
+            <li>
+                <input type="range" id="lineRuler" value="线条粗细" min="1" max="20">
+            </li>
+        </ul>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
